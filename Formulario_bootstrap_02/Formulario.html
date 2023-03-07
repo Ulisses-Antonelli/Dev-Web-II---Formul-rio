@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<!--As classes:
+    bg-primary 
+    bg-secondary 
+    bg-tertiary
+    são responsaveis por definir a cor do background
+-->
+<body class="bg-secondary">
+
+    <!--As classes:
+        container - ocupa a largura maxima do elemento pai
+        container-fluid - ocupa a largura maxima do layout
+     -----------------------------------------------------
+     O atributo:
+        data-bs-theme - define um tema para o elemento a ser aplicado (backgroud + cor da letra)    
+    -->
+    <div class="container bg-primary ps-3" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-sm">
+            <a class="navbar-brand" href="#">SISTEMAS WEB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav data-bs-theme="dark"">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Cadastrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <!--Qualquer classe que contenha o atributo disabled suas funções estarão desabilitadas-->
+                        <a class="nav-link disabled">Consultar</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--A classe bg-white define como branco a cor do background-->
+    <div class="container bg-white">         
+        <div>
+            <!--Os prefixos :
+                ps- refere-se ao padding à esquerda
+                pt- refere-se ao padding top
+            -->
+            <h4 class="ps-3 pt-3"><Strong>Cadastrar - Agendamento de Potenciais Clientes</Strong></h4>
+            <p class="ps-3">Sistema utilzado para agendamento de serviços</p>
+        </div>
+            <!--O prefixo :
+                m- refere-se a margin aplicada em torno de todo elemento
+            -->
+        <div class="m-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="m-3">
+            <label for="exampleFormControlInput1" class="form-label">Telefone:</label>
+            <input type="tel" class="form-control" placeholder="(xx)xxxxx-xxxx">
+        </div>
+        <div class="m-3">
+            <label for="exampleFormControlInput1" class="form-label">Origem:</label>
+
+            <!-- A classe: text-muted altera a cor do texto-placeholder-->
+            <select class="form-select text-muted" aria-label="Default select example">
+                <option value="1">Celular</option>
+                <option value="2">???</option>
+                <option value="3">???</option>
+            </select>
+        </div>
+        <div class="m-3">
+            <label for="exampleFormControlInput1" class="form-label">Data do contato:</label>
+            <input type="date" class="form-control text-muted" placeholder="dd/mm/aaaa">
+        </div>    
+        <div class="m-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Observação</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <!--O prefixo :
+            col- refere-se a largura de uma coluna no sistema de grid responsivo do bootstrap
+            col-md - telas médias
+            col-sm - telas menores
+            col-lg - telas largas
+            col-xl - telas extra largas
+            
+            O sistema de grid é composto por 12 colunas, assim o elemento ocupara partes dessa divisão 
+            conforme a disposição desejada
+
+            col-3 fará que o elemento ocupe 3/12 da largura total disponivel
+        -->
+        <div class="col-auto p-3">
+            <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+</body>
+</html>
